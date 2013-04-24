@@ -1,0 +1,18 @@
+<div class="container">
+<h1>Edit Post</h1>
+ <form action=<%="/posts/" + @post.id.to_s + "/edit"%> method="post"> 
+
+  Title: <input type="text" name="title" value=<%= @post.title%>><br>
+  Price: <input type="text" name="price" value=<%= @post.price.to_s%>><br>
+  Location: <input type="text" name="location" value=<%= @post.location%>><br>
+  Email: <input type="text" name="email" value=<%= @post.email%>><br>
+  Description: <textarea rows="10" cols="50" name="description"><%= @post.description%></textarea><br>
+ <input type="submit" value="Submit"> 
+
+ </form>
+ <form action=<%="/posts/" + @post.id.to_s + "/delete"%> method="post"> 
+ <input type="submit" value="Delete"> 
+ </form> 
+
+
+</div>

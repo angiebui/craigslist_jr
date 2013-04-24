@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Submitted!</h1>
+  <% token = 10.times.map { rand(9) }.join('') %>
+  <p>Here's your secret token: <%=token%></p>
+  <p> Visit "/categories/<%= @post.id.to_s %>/<%=token%>" or click "Edit" below</p>
+
+  <%="<a href='/posts/" + @post.id.to_s + "/" + token + "'>Edit</a>"%>
+
+  <%="<a href='/categories/" + @cat.id.to_s + "'>Category Home</a>"%>
+</div>
+

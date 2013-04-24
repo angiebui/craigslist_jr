@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @cat.title %></h1>
+
+  <%="<a href='/categories/" + @cat.id.to_s + "/new'>New Posting</a>"%>
+  <% @posts.each do |post| %>
+    <ul>
+      <%= "<li><a href='/posts/" + post.id.to_s + "'>" + post.title + '</a></li>' %>
+    </ul>
+  <% end %>
+  <a href='/'>Home</a>
+</div>

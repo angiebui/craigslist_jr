@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @post.title %></h1>
+    <ul>
+      <%= '<li> Location: ' + @post.location+ '</li>' %>
+      <%= '<li> Price $' + @post.price.to_s + '</li>' %>
+      <%= '<li> Description: ' + @post.description + '</li>' %>
+      <%= '<li> Interested? Email me at: ' + @post.email + '</li>' %>
+    </ul>
+    <%="<a href='/categories/" + @post.category_id.to_s + "'>Category Home</a>"%>
+</div>
+
+
